@@ -1,0 +1,1391 @@
+/*General Styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Montserrat', serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/*End Of General Styling*/
+
+/*Header*/
+
+header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    /*flex-direction: row;*/
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+header .brand {
+    position: relative;
+    left: 40px;
+    top: 5px;
+}
+header .brand img {
+    width: auto;
+    height: 49px;
+}
+header .nav-bar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-color: #FFF7B4;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.5s ease-in-out all;
+    transform: translateX(100%);
+    z-index: 18;
+}
+header .nav-bar nav .brand1 {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+}
+header .nav-bar nav .brand1 img {
+    width: auto;
+    height: 49px;
+}
+header .nav-bar nav .nav-button {
+    width: 134px;
+    height: 32px;
+    display: flex;
+    background: #514742;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    align-self: center;
+    line-height: 18px;
+    border: none;
+    border-radius: 45px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+header .nav-bar nav .nav-button:hover {
+    background: #FFFFFF;
+    text-align: center;
+}
+header .nav-bar nav .nav-button:active {
+    background: #514742;
+}
+header .nav-bar nav .nav-button a {
+    color: #FFFFFF;
+    padding: 7px 23px;
+}
+header .nav-bar nav .nav-button a:hover {
+    color: #514742;
+    text-align: center;
+}
+header .nav-bar nav .nav-button a:active {
+    color: #FFC514;
+}
+header .nav-bar nav .media-icons {
+    text-align: center;
+}
+header .nav-bar nav .media-icons ol {
+    list-style: none;
+}
+header .nav-bar nav .media-icons ol li {
+    display: inline-block;
+}
+header .nav-bar nav.nav-toggle {
+    transform: translateX(0%);
+}
+header .nav-bar nav .nav-list {
+    list-style: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+header .nav-bar nav .nav-list li {
+    padding-right: 0;
+    position: relative;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+    margin-top: 55px;
+    margin-bottom: 0;
+    color: #000000;
+}
+header .nav-bar nav .nav-list li:first-child a:hover,
+header .nav-bar nav .nav-list li:nth-child(2) a:hover,
+header .nav-bar nav .nav-list li:nth-child(3) a:hover,
+header .nav-bar nav .nav-list li:nth-child(4) a:hover,
+header .nav-bar nav .nav-list li:nth-child(5) a:hover {
+    color: #FFC514;
+}
+header .nav-bar nav .nav-list li:first-child a:active,
+header .nav-bar nav .nav-list li:nth-child(2) a:active,
+header .nav-bar nav .nav-list li:nth-child(3) a:active,
+header .nav-bar nav .nav-list li:nth-child(4) a:active,
+header .nav-bar nav .nav-list li:nth-child(5) a:active {
+    color: #514742;
+}
+header .nav-bar nav .nav-list li:first-child,
+header .nav-bar nav .nav-list li:nth-child(2),
+header .nav-bar nav .nav-list li:nth-child(3),
+header .nav-bar nav .nav-list li:nth-child(4),
+header .nav-bar nav .nav-list li:nth-child(5) {
+    position: relative;
+    top: 25px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+header .nav-bar nav .nav-list li a {
+    text-decoration: none;
+    color: #514742;
+    transition: .5s ease;
+    transition-property: color;
+}
+header .nav-bar .ham {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    margin: 18px 25px;
+    z-index: 20;
+}
+header .nav-bar .ham .bar {
+    height: 2px;
+    width: 32px;
+    background-color: #514742;
+    position: relative;
+    transition: 0.5s ease all;
+    z-index: 20;
+}
+header .nav-bar .ham .bar:hover {
+    background-color: #FFC514;
+}
+header .nav-bar .ham .bar:active {
+    background: #514742;
+}
+header .nav-bar .ham .bar:before,
+header .nav-bar .ham .bar:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 32px;
+    background-color: #494A50;
+    transition: 0.5s ease all;
+
+}
+header .nav-bar .ham .bar:before {
+    top: -10px;
+    left: 0;
+}
+header .nav-bar .ham .bar:after {
+    bottom: -10px;
+    left: 0;
+}
+header .nav-bar .ham.close .bar:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+header .nav-bar .ham.close .bar:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+header .nav-bar .ham.close .bar {
+    background-color: transparent;
+}
+
+/*End Of Header*/
+
+/*Home Section*/
+
+section .home {
+    background: #FFFDF6;
+    width: 100%;
+    position: relative;
+    top: 68px;
+    height: 290px;
+}
+section .home .topic-container {
+    position: relative;
+    width: 376px;
+    height: 70px;
+    top: 40px;
+    left: 40px;
+}
+section .home .topic-container h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #514742;
+}
+section .home .home-essay {
+    position: relative;
+    width: 296px;
+    height: 108px;
+    top: 60px;
+    left: 40px;
+}
+section .home .home-essay p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000
+}
+section .home .cta {
+    width: 134px;
+    height: 32px;
+    position: relative;
+    left: 55px;
+    top: 50px;
+    background: #FFC514;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 45px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    transition-property: background-color;
+}
+section .home .cta:hover {
+    background: #514742;
+}
+section .home .cta:active {
+    background: #FFC514;
+}
+section .home .cta a {
+    color: #FFFFFF;
+    padding: 7px 23px;
+}
+section .home .cta a:hover {
+    color: #FFC514;
+}
+section .home .cta a:active {
+    color: #514742;
+}
+.bg-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.bg-img img {
+    position: relative;
+    height: 376px;
+    width: 464px;
+    margin-top: 80px;
+}
+
+/*End of Home Section*/
+
+/*What We Do Section*/
+
+.WhatWeDo {
+    position: relative;
+    bottom: 5px;
+    display: block;
+    width: 100%;
+    height: 488px;
+    background: #FFF7B4;
+}
+.WhatWeDo-img {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    width: auto;
+    height: 360px;
+    margin-top: 45px;
+    padding-right: 0;
+    margin-right: 1px;
+    padding-left: 24px;
+}
+.WhatWeDo-img::-webkit-scrollbar {
+    width: auto;
+    height: 5px;
+}
+.WhatWeDo-img::-webkit-scrollbar-thumb {
+    background-color: #514742;
+    border-radius: 20px;
+}
+.WhatWeDo-img::-webkit-scrollbar-thumb:hover {
+    background-color: #FFC514;
+}
+.WhatWeDo-img .img {
+    display: inline-block;
+    margin-left: 10px;
+    z-index: 5;
+}
+.WhatWeDo-img .img img {
+    height: 306px;
+}
+.WhatWeDo-img p {
+    position: relative;
+    top: 235px;
+    left: 20px;
+    padding-right: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.WhatWeDo-img p span {
+    position: absolute;
+    top: 25px;
+    right: 147px;
+}
+.WhatWeDo .WhatWeDo-heading {
+    display: inline-block;
+    position: relative;
+    left: 35px;
+    right: 38.6%;
+    top: 9.01%;
+    bottom: 77.82%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #514742;
+}
+
+/*End Of What We Do Section*/
+
+/*About Section*/
+
+.About-WordFamilyFund .About-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #514742;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px auto 20px auto;
+    justify-content: center;
+    align-items: center;
+}
+.About-WordFamilyFund .About-heading p {
+    width: 80%;
+}
+.About-WordFamilyFund .About-heading p span {
+    font-weight: 500;
+}
+.About-WordFamilyFund .About-info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #514742;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.About-WordFamilyFund .About-info p {
+    width: 80%;
+}
+.About-WordFamilyFund .img5 {
+    width: 100%;
+    display: flex;
+    margin: 80px auto 60px auto;
+    justify-content: center;
+    align-items: center;
+}
+.About-WordFamilyFund .img5 img {
+    width: 80%;
+    height: auto;
+    max-width: 525px;
+    max-height: 526px;
+    z-index: 5;
+}
+
+/*End Of About Section*/
+
+/*Logos Section*/
+
+.logos {
+    height: 71px;
+    background: #FFF7B4;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logos img {
+    width: 70%;
+    height: auto;
+    margin-left: 12px;
+}
+
+/*End Of Logos Section*/
+
+/*Apply Here Section*/
+
+.Applyhere-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 60px;
+}
+.Applyhere-container .Applyhere-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Applyhere-container .Applyhere-left .word1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #514742;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center
+}
+.Applyhere-container .Applyhere-left .word2 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #514742;
+    width: 78%;
+    max-width: 652px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px auto;
+    justify-content: center;
+    align-items: center
+}
+.Applyhere-container .Applyhere-left .media-icons {
+    text-align: center;
+    margin: 25px auto;
+}
+.Applyhere-container .Applyhere-left .media-icons ol li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*Form1 Section*/
+
+.Applyhere-container .form-container {
+    margin: 50px auto;
+    width: 100%;
+}
+.Applyhere-container .form-container form .form {
+    width: 70%;
+    max-width: 652px;
+    display: flex;
+    margin: 0 auto 28px auto;
+    justify-content: center;
+    align-items: center;
+}
+.Applyhere-container .form-container form .form .three-forms {
+    width: 100%;
+    height: auto;
+    padding: 30px 30px;
+    outline: none;
+    border-radius: 90px;
+    border-color: #514742;
+    border-width: 1px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.Applyhere-container .form-container form .form .three-forms:active,
+.Applyhere-container .form-container form .form .three-forms:focus {
+    border-color: #FFC514;
+    box-shadow: 0 0 0 .07rem #FFC514;
+}
+.Applyhere-container .form-container form .fourth-form {
+    width: 70%;
+    max-width: 652px;
+    display: flex;
+    margin: 30px auto 40px auto;
+    justify-content: center;
+    align-items: center;
+}
+.Applyhere-container .form-container form .fourth-form .input {
+    outline: none;
+    border-color: #514742;
+    width: 100%;
+    border-width: 1px;
+    border-radius: 13px;
+    resize: none;
+    padding: 25px 40px 230px 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.Applyhere-container .form-container form .fourth-form .input:active,
+.Applyhere-container .form-container form .fourth-form .input:focus {
+    border-color: #FFC514;
+    box-shadow: 0 0 0 .07rem #FFC514;
+}
+.Applyhere-container .form-container form .submit1,
+.newsletter-container .form2-container form .form2-div .submit2 {        /*Form2 Submit Button*/
+    width: 165px;
+    height: 58px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #FFC514;
+    border: none;
+    border-radius: 89px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+.Applyhere-container .form-container form .submit1:hover {
+    color: #FFC514;
+    background: #514742;
+}
+.Applyhere-container .form-container form .submit1:active {
+    color: #FFFFFF;
+    background: #FFC514;
+}
+
+/*End Of Form1 Section*/
+
+/*End Of Apply Here Section*/
+
+/*NewsLetter Section*/
+
+.newsletter-container {
+    position: relative;
+    width: 100%;
+    height: 383px;
+    margin-top: 35px;
+    background: #FFF7B4;
+}
+.newsletter-container .join-us .signup-1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0 auto 0 auto;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #514742;
+}
+.newsletter-container .join-us .signup-2 {
+    width: 363px;
+    height: 54px;
+    margin: 0 auto 30px auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #514742;
+}
+
+/*Form2 Section*/
+
+.newsletter-container .form2-container form .form2-div .submit2:hover {
+    background: #514742;
+}
+.newsletter-container .form2-container form .form2-div .submit2:active {
+    background: #FFC514;
+}
+.newsletter-container .form2-container form .form2-div .form2 {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter-container .form2-container form .form2-div .form2 .nw-btn-text {
+    width: 65%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 23px 30px;
+    margin-bottom: 35px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #514742;
+    background: #FFFFFF;
+    border-width: 1px;
+    border-radius: 90px;
+    outline: none;
+    border-color: #514742;
+}
+.newsletter-container .form2-container form .form2-div .form2 .nw-btn-text:active,
+.newsletter-container .form2-container form .form2-div .form2 .nw-btn-text:focus {
+    border-color: #514742;
+    box-shadow: 0 0 0 .07rem #514742;
+}
+
+/*End Of Form2 Section*/
+
+/*End Of NewsLetter Section*/
+
+/*Footer*/
+
+footer .footer-container {
+    background: #514742;
+    width: 100%;
+    height: 239px;
+}
+footer .footer-container .footer-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+footer .footer-container .footer-wrapper .column1 .line1,
+footer .footer-container .footer-wrapper .column2 .line2,
+footer .footer-container .footer-wrapper .column3 .line3 {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+footer .footer-container .footer-wrapper .column1 .line1 li,
+footer .footer-container .footer-wrapper .column2 .line2 li{
+    margin: 15px;
+}
+footer .footer-container .footer-wrapper .column3 .line3 li {
+    margin-bottom: 12px;
+}
+footer .footer-container .footer-wrapper .column1 .line1 li a,
+footer .footer-container .footer-wrapper .column2 .line2 li a,
+footer .footer-container .footer-wrapper .column3 .line3 li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+}
+footer .footer-container .footer-wrapper .column3 .line3 .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    right: 10px;
+}
+footer .footer-container .footer-wrapper .column3 .line3 .social-icons img {
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+/*End Of Footer Section*/
+
+/*Media Queries For Web And Mobile Responsiveness*/
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Media Queries For Minimum Screen Width Of 700px*/
+
+@media (min-width: 700px) {
+
+    /*Header*/
+
+    header .nav-bar nav .media-icons {
+        margin-bottom: 70px;
+    }
+
+    /*End Of Header*/
+
+    /*Home Section*/
+
+    .bg-img {
+        position: absolute;
+        width: 380px;
+        display: flex;
+        right: 0;
+        top: 180px;
+    }
+    .bg-img img {
+        position: absolute;
+        width: 80%;
+        height: auto;
+    }
+
+    /*End Of Home Section*/
+
+    /*What We Do Section*/
+
+    .WhatWeDo {
+        margin-top: 70px;
+    }
+
+    /*End Of What We Do Section*/
+
+    /*Logos Section*/
+
+    .logos {
+        height: 150px;
+    }
+
+    /*End Of Logos Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 700px*/
+
+/*Media Queries For Minimum Screen Width Of 878px*/
+
+@media (min-width: 878px) {
+
+    /*Header*/
+
+    header .nav-bar nav .brand1 {
+        display: none;
+    }
+    header .nav-bar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+    header .nav-bar nav {
+        position: relative;
+        transform: translate(0, 0);
+        width: 100%;
+        height: auto;
+        top: 20px;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        padding: 0;
+    }
+    header .nav-bar nav .nav-list li {
+        font-size: 18px;
+    }
+    header .nav-bar nav .nav-list li:first-child a:hover,
+    header .nav-bar nav .nav-list li:nth-child(2) a:hover,
+    header .nav-bar nav .nav-list li:nth-child(3) a:hover,
+    header .nav-bar nav .nav-list li:nth-child(4) a:hover,
+    header .nav-bar nav .nav-list li:nth-child(5) a:hover {
+        color: #FFC514;
+    }
+    header .nav-bar nav .nav-list li:first-child a:active,
+    header .nav-bar nav .nav-list li:nth-child(2) a:active,
+    header .nav-bar nav .nav-list li:nth-child(3) a:active,
+    header .nav-bar nav .nav-list li:nth-child(4) a:active,
+    header .nav-bar nav .nav-list li:nth-child(5) a:active {
+        color: #514742;
+    }
+    header .nav-bar nav .nav-button {
+        background-color: #FFC514;
+        position: relative;
+        top: -27px;
+        left: -65px;
+    }
+    header .nav-bar nav .nav-button:hover {
+        background-color: #514742;
+    }
+    header .nav-bar nav .nav-button:active {
+        background-color: #FFC514;
+    }
+    header .nav-bar nav .nav-button a {
+        color: #FFFFFF;
+    }
+    header .nav-bar nav .nav-button a:hover {
+        color: #FFC514;
+    }
+    header .nav-bar nav .nav-button a:active {
+        color: #514742;
+    }
+    header .nav-bar nav .media-icons {
+        display: none;
+    }
+    header .nav-bar nav .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 30px;
+        margin-right: 9%;
+        top: -70px;
+        padding-bottom: 0;
+        flex-direction: row;
+    }
+    header .nav-bar nav .nav-list li {
+        padding: 0 10px;
+        position: relative;
+        left: -60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header .nav-bar nav .nav-list li a {
+        color: black;
+        font-size: 15px;
+        transition: .5s ease;
+        transition-property: background-color, color;
+    }
+    header .nav-bar .ham {
+        display: none;
+    }
+
+    /*End Of Header*/
+
+    /*Home Section*/
+
+    .bg-img {
+        top: 180px;
+    }
+
+    /*End Of Home Section*/
+
+    /*What We Do Section*/
+
+    .WhatWeDo {
+        margin-top: 70px;
+    }
+
+    /*End Of What We Do Section*/
+
+    /*About Section*/
+
+    .About-WordFamilyFund {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .About-details {
+        width: 50%;
+        margin: 80px 10px 150px 0;
+    }
+    .About-WordFamilyFund .About-heading,
+    .About-WordFamilyFund .About-info {
+        text-align: left;
+    }
+    .About-WordFamilyFund .About-heading {
+        font-size: 48px;
+        padding: 0;
+        line-height: 59px;
+        margin-bottom: 40px;
+        margin-left: 0;
+        width: auto;
+    }
+    .About-WordFamilyFund .About-info {
+        font-size: 18px;
+        width: auto;
+        margin-left: 0;
+    }
+    .About-WordFamilyFund .img5 {
+        width: 50%;
+        margin: 150px 0 150px 30px;
+        padding: 0;
+    }
+
+    /*End Of About Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 878px*/
+
+/*Media Queries For Minimum Screen Width Of 1000px*/
+
+@media (min-width: 1000px) {
+
+    /*Header*/
+
+    header .nav-bar .brand {
+        left: 80px;
+    }
+    header {
+        top: 0;
+        height: 85px;
+    }
+    header .nav-bar nav {
+        top: 25px;
+        position: relative;
+    }
+    header .nav-bar nav .nav-list {
+        left: 0;
+    }
+
+    /*End Of Header*/
+
+    /*Home Section*/
+
+    section .home {
+        height: 492px;
+        margin-top: 45px;
+    }
+    section .home .topic-container {
+        top: 80px;
+        left: 70px;
+    }
+    section .home .topic-container h1 {
+        font-size: 40px;
+        line-height: 61px;
+        width: 586px;
+        height: 109px;
+    }
+    section .home .home-essay {
+        top: 150px;
+        left: 70px;
+    }
+    section .home .home-essay p {
+        font-size: 17px;
+        line-height: 24px;
+        width: 450px;
+        height: 169px;
+    }
+    section .home .cta {
+        top: 160px;
+        left: 100px;
+    }
+    .bg-img {
+        width: 515px;
+        top: 350px;
+    }
+    .bg-img img {
+        width: 100%;
+    }
+
+    /*End Of Home Section*/
+
+    /*What We Do Section*/
+
+    .WhatWeDo {
+        margin-top: 72px;
+    }
+
+    .WhatWeDo .WhatWeDo-heading {
+        font-size: 36px;
+    }
+
+    /*End Of What We Do Section*/
+
+    /*Apply Here Section*/
+
+    .Applyhere-container {
+        margin-top: 50px;
+    }
+    .Applyhere-container .Applyhere-left {
+        padding-top: 25px;
+    }
+
+    /* End Of Apply Here Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 1000px*/
+
+/*Media Queries For Minimum Screen Width Of 1048px And Maximum Screen Width Of 1162px*/
+
+@media (min-width: 1048px) and (max-width: 1162px) {
+
+    /*What We Do Section*/
+
+    .WhatWeDo .WhatWeDo-img {
+        justify-content: flex-end;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .WhatWeDo .WhatWeDo-img .img {
+        height: auto;
+        width: auto;
+        margin-right: 10px;
+        position: relative;
+    }
+    .WhatWeDo .WhatWeDo-img .img img {
+        height: auto;
+        width: 100%;
+    }
+
+    /*End Of What We Do Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 1048px And Maximum Screen Width Of 1162px*/
+
+/*Media Queries For Minimum Screen Width Of 1163px*/
+
+@media (min-width: 1163px) {
+
+    /*Header*/
+
+    header .nav-bar nav .nav-list {
+        margin-right: 190px;
+    }
+    header .nav-bar nav .nav-list li a {
+        font-size: 18px;
+    }
+    header .nav-bar nav a .nav-button {
+        top: 0;
+    }
+    header .nav-bar .brand {
+        left: 55px;
+    }
+    header .nav-bar .brand img {
+        width: 210px;
+        height: 68px;
+    }
+    header .nav-bar nav .nav-list li:first-child {
+        display: inline;
+    }
+
+    /*End Of Header*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 1163px*/
+
+/*Media Queries For Minimum Screen Width Of 1163px And Maximum Screen Width Of 1261px*/
+
+@media (min-width: 1163px) and (max-width: 1261px) {
+
+    /*What We Do Section*/
+
+    .WhatWeDo {
+        height: auto;
+    }
+    .WhatWeDo .WhatWeDo-img {
+        height: auto;
+        padding-bottom: 100px;
+        gap: 20px;
+        padding-right: 35px;
+    }
+    .WhatWeDo .WhatWeDo-img .img {
+        flex-direction: column;
+        align-items: center;
+        width: calc(25% - 20px);
+        height: 100%;
+        margin-right: 30px;
+        margin-left: auto;
+    }
+    .WhatWeDo .WhatWeDo-img .img img {
+        height: auto;
+    }
+    .WhatWeDo .WhatWeDo-heading {
+        left: 3%;
+        top: 50px;
+    }
+    .WhatWeDo .WhatWeDo-img p span {
+        left: 0;
+    }
+
+    /*What We Do Section*/
+
+}
+
+/*Media Queries For Minimum Screen Width Of 1163px And Maximum Screen Width Of 1261px*/
+
+/*Media Queries For Minimum Screen Width Of 1200px*/
+
+@media (min-width: 1200px) {
+
+    /*Header*/
+
+    header .brand img {
+        width: 100%;
+        height: 100%;
+    }
+
+    header .nav-bar nav .nav-button {
+        width: 202px;
+        height: 51px;
+        font-size: 18px;
+    }
+    header .nav-bar nav .nav-button a {
+        width: 202px;
+    }
+    header .nav-bar nav .nav-list {
+        margin-right: 130px;
+    }
+
+    /*End Of Header*/
+
+    /*Home Section*/
+
+    section .home .topic-container h1 {
+        font-size: 50px;
+        line-height: 61px;
+        width: 586px;
+        height: 109px;
+    }
+    section .home .home-essay p {
+        font-size: 20px;
+        line-height: 24px;
+        width: 516px;
+        height: 169px;
+    }
+    section .home .cta {
+        width: 202px;
+        height: 51px;
+        font-size: 18px;
+    }
+    section .home .cta a {
+        width: 202px;
+        text-align: center;
+    }
+    .bg-img {
+        right: 100px;
+    }
+
+    /*End Of Home Section*/
+
+    /*Logos Section*/
+
+    .logos {
+        height: 260px;
+    }
+    .logos img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /*End Of Logos Section*/
+
+    /*Apply Here Section*/
+
+    .Applyhere-container {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 30px 0;
+        width: 100%;
+        padding-top: 120px;
+    }
+    .Applyhere-container .Applyhere-left {
+        width: 48%;
+        margin: 0 auto;
+        padding-left: 80px;
+        padding-top: 65px;
+    }
+    .Applyhere-container .Applyhere-left .word1 {
+        position: relative;
+        text-align: left;
+        font-size: 48px;
+        width: 335px;
+        margin: 0 0 35px 0;
+    }
+    .Applyhere-container .Applyhere-left .word2 {
+        text-align: left;
+        width: 424px;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 35px 0;
+    }
+    .Applyhere-container .Applyhere-left .media-icons {
+        text-align: left;
+        width: auto;
+        margin: 0 0 0 10px;
+    }
+
+    /*Form1 Section*/
+
+    .Applyhere-container .form-container {
+        width: 52%;
+        margin: 0 0 30px 0;
+    }
+    .Applyhere-container .form-container form {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .Applyhere-container .form-container form .form,
+    .Applyhere-container .form-container form .fourth-form {
+        justify-content: space-between;
+        width: auto;
+        margin-right: 15px;
+        margin-left: auto;
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+    .Applyhere-container .form-container form .fourth-form .input {
+        width: 100%;
+        max-width: 652px;
+        height: 20px;
+        padding-bottom: 250px;
+        padding-left: 40px;
+        margin: auto;
+    }
+    .Applyhere-container .form-container form .form .three-forms {
+        width: 100%;
+        max-width: 652px;
+        height: 85px;
+        margin: auto;
+        padding: 0 40px;
+    }
+    .Applyhere-container .form-container form .submit1 {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .Applyhere-container .form-container form .submit1,
+    .newsletter-container .form2-container form .form2-div .submit2 {           /*Form2 Submit Button*/
+        width: 183px;
+        height: 87px;
+        font-size: 24px;
+    }
+
+    /*End Of Form1 Section*/
+
+    /*End Of Apply Here Section*/
+
+    /*NewsLetter Section*/
+
+    .newsletter-container .join-us .signup-1 {
+        font-size: 48px;
+    }
+    .newsletter-container .join-us .signup-2 {
+        width: 500px;
+        line-height: 24px;
+    }
+    .form2-container form .form2-div {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+    .newsletter-container .form2-container form .form2-div .form2 .nw-btn-text {
+        width: 100%;
+        height: auto;
+        margin: auto 0;
+        padding: 34px 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsletter-container .form2-container form .form2-div .form2 {
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin-right: 15px;
+        max-width: 867px;
+        align-items: center;
+        display: flex;
+    }
+    .newsletter-container .form2-container form .form2-div .submit2 {
+        margin-left: 15px;
+        margin-right: 0;
+    }
+
+    /*End Of NewsLetter Section*/
+
+    /*Footer*/
+
+    footer .footer-container .footer-wrapper {
+        width: 50%;
+    }
+
+    /*End Of Footer*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 1200px*/
+
+/*Media Queries For Minimum Screen Width Of 1262px*/
+
+@media (min-width: 1262px) {
+
+    /*What We Do Section*/
+
+    .WhatWeDo {
+        height: 649px;
+    }
+    .WhatWeDo .WhatWeDo-heading {
+        font-size: 48px;
+        font-weight: 400;
+        position: relative;
+        left: 4.42%;
+        top: 19.01%;
+        font-style: normal;
+    }
+    .WhatWeDo .WhatWeDo-img {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        overflow-x: hidden;
+        height: 100%;
+        padding-left: 30px;
+        position: relative;
+        top: 90px;
+    }
+    .WhatWeDo .WhatWeDo-img p {
+        top: 310px;
+    }
+    .WhatWeDo .WhatWeDo-img p span {
+        left: 0;
+    }
+    .WhatWeDo .WhatWeDo-img .img {
+        flex-direction: column;
+        align-items: center;
+        width: calc(25% - 20px);
+        height: auto;
+        margin-right: auto;
+    }
+    .WhatWeDo .WhatWeDo-img .img img {
+        height: auto;
+    }
+
+    /*End Of What We Do Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 1262px*/
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*End Of Media Queries For Web And Mobile Responsiveness*/
