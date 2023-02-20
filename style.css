@@ -27,7 +27,6 @@ header {
     width: 100%;
     height: 65px;
     display: flex;
-    /*flex-direction: row;*/
     position: fixed;
     align-items: center;
     justify-content: space-between;
@@ -195,7 +194,7 @@ header .nav-bar .ham .bar:after {
     content: '';
     height: 2px;
     width: 32px;
-    background-color: #494A50;
+    background-color: #514742;
     transition: 0.5s ease all;
 
 }
@@ -707,6 +706,16 @@ footer .footer-container .footer-wrapper .column3 .line3 li a {
     font-weight: 500;
     font-size: 13px;
 }
+footer .footer-container .footer-wrapper .column1 .line1 li a:hover,
+footer .footer-container .footer-wrapper .column2 .line2 li a:hover,
+footer .footer-container .footer-wrapper .column3 .line3 li a:hover {
+    color: #FFC514;
+}
+footer .footer-container .footer-wrapper .column1 .line1 li a:active,
+footer .footer-container .footer-wrapper .column2 .line2 li a:active,
+footer .footer-container .footer-wrapper .column3 .line3 li a:active {
+    color: #FFFFFF;
+}
 footer .footer-container .footer-wrapper .column3 .line3 .social-icons {
     display: flex;
     flex-direction: row;
@@ -731,6 +740,91 @@ footer .footer-container .footer-wrapper .column3 .line3 .social-icons img {
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Media Queries For Minimum Screen Width Of 320px And Maximum Screen Width Of 429px*/
+
+@media (min-width: 320px) and (max-width: 429px) {
+
+    /*Header*/
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .nav-bar .ham {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 35px;
+        right: 25px;
+    }
+
+    /*End Of Header*/
+
+    /*Home Section*/
+
+    section .home {
+        display: flex;
+        flex-wrap: wrap;
+        height: 300px;
+    }
+
+    section .home .topic-container {
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section .home .topic-container h1 {
+        font-size: 25px;
+    }
+
+    section .home .home-essay {
+        width: 250px;
+        margin-top: 30px;
+        top: 5px;
+    }
+
+    section .home .cta {
+        top: 0;
+    }
+
+    .bg-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*End Of Home Section*/
+
+    /*Newsletter Section*/
+
+    .newsletter-container .join-us .signup-2 {
+        width: 100%;
+    }
+
+    /*End Of Newsletter Section*/
+
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 320px And Maximum Screen Width Of 429px*/
+
+/*Media Queries For Minimum Screen Width Of 384px And Maximum Screen Width Of 429px*/
+
+@media (min-width: 384px) and (max-width: 429px) {
+    section .home {
+        flex-direction: column;
+    }
+
+    section .home .home-essay {
+        top: 20px;
+    }
+
+    section .home .cta {
+        top: 30px;
+    }
+}
+
+/*End Of Media Queries For Minimum Screen Width Of 384px And Maximum Screen Width Of 429px*/
 
 /*Media Queries For Minimum Screen Width Of 700px*/
 

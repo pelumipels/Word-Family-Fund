@@ -14,7 +14,7 @@ form.addEventListener('submit', e => {
         const message = form.querySelector('#message').value
 
     if (!fullName || !email || !phoneNumber || !message) {
-        alert('Please fill in all fields')
+        alert('Please fill in all fields before submitting')
         return
     }
 
